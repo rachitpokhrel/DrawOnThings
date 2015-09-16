@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DTCanvas.h
 //  DrawOnThings
 //
 //  Created by Rachit on 9/15/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface DTCanvas : UIView
+- (UIImage *)dtsnapshot;
 @end
-

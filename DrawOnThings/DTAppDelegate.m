@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Rachit. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "DTAppDelegate.h"
 
-@interface AppDelegate ()
+@interface DTAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation DTAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
