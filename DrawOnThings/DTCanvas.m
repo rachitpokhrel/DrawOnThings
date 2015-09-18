@@ -16,20 +16,21 @@
 @end
 
 @implementation DTCanvas
-{
-    
-}
 
 
 -(id)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]){
         self.multipleTouchEnabled = NO;
+        self.userInteractionEnabled = YES;
         }
     return self;
 }
 
+
+
 - (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
     // Drawing code
     [self.path stroke];
 }
@@ -39,7 +40,6 @@
     // Initialize a new path for the user gesture
     self.path = [UIBezierPath bezierPath];
     self.path.lineWidth = 4.0f;
-    
     UITouch *touch = [touches anyObject];
     [self.path moveToPoint:[touch locationInView:self]];
 }
@@ -57,23 +57,13 @@
     UITouch *touch = [touches anyObject];
     [self.path addLineToPoint:[touch locationInView:self]];
     [self setNeedsDisplay];
+    
+
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self touchesEnded:touches withEvent:event];
-}
-
-- (UIImage *)dtsnapshot {
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
-    
-    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
-    
-    // old style [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
 }
 
 @end

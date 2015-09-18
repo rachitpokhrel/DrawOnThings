@@ -8,6 +8,7 @@
 
 #import "DTDrawViewController.h"
 #import "DTCanvas.h"
+#import "UIView+Screenshot.h"
 
 @interface DTDrawViewController ()
 
@@ -19,34 +20,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.imageView.image = self.image;
+    [self image];
     self.canvas.backgroundColor = [UIColor clearColor];
+}
+
+-(void)image
+{
+    ALAssetRepresentation *rep = [self.asset defaultRepresentation];
+    CGImageRef imageRef = [rep fullResolutionImage];
+    UIImage *image = [UIImage imageWithCGImage:imageRef];
+    self.imageView.image = image;
 }
 
 - (IBAction)save:(id)sender
 {
-    /*
-    UIImage *image = [self.canvas dtsnapshot];
+    UIImage *image = [self.canvas imageByDrawingOnImageCG:self.imageView.image];
     NSData *imageData = UIImagePNGRepresentation(image);
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    NSString *imagePath =[documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",@"cached"]];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:imagePath forKey:@"cachedImagePath"];
-    
-    
-    NSLog((@"pre writing to file"));
-    if (![imageData writeToFile:imagePath atomically:NO])
-    {
-        NSLog((@"Failed to cache image data to disk"));
-    }
-    else
-    {
-        NSLog((@"the cachedImagedPath is %@",imagePath));
-    }
-     */
+    ALAssetRepresentation *rep = [self.asset defaultRepresentation];
+    NSDictionary *dictionary = [rep metadata];
+    [self.asset writeModifiedImageDataToSavedPhotosAlbum:imageData metadata:dictionary completionBlock:^(NSURL *assetURL, NSError *error){
+        
+    }];
+     
 }
 
 

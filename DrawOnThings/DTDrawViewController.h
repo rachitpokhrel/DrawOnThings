@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 #import "DTCanvas.h"
 
 @interface DTDrawViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet DTCanvas *canvas;
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) UIImage *image;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) ALAsset *asset;
 - (IBAction)save:(id)sender;
 
 

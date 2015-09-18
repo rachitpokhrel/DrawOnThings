@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C6A67BF1BAB5FD200A7C781 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A67BE1BAB5FD200A7C781 /* UIView+Screenshot.m */; };
+		3C6A67C41BAB803F00A7C781 /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A67C31BAB803F00A7C781 /* ghost.png */; };
 		3CD0AC4A1BA8ED370024BC7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0AC491BA8ED370024BC7D /* main.m */; };
 		3CD0AC4D1BA8ED370024BC7D /* DTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0AC4C1BA8ED370024BC7D /* DTAppDelegate.m */; };
 		3CD0AC501BA8ED370024BC7D /* DrawOnThings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0AC4E1BA8ED370024BC7D /* DrawOnThings.xcdatamodeld */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C6A67BD1BAB5FD200A7C781 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		3C6A67BE1BAB5FD200A7C781 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		3C6A67C31BAB803F00A7C781 /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
 		3CD0AC441BA8ED370024BC7D /* DrawOnThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawOnThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD0AC481BA8ED370024BC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CD0AC491BA8ED370024BC7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,6 +148,8 @@
 			children = (
 				3CD0AC711BA8ED750024BC7D /* DTCanvas.h */,
 				3CD0AC721BA8ED750024BC7D /* DTCanvas.m */,
+				3C6A67BD1BAB5FD200A7C781 /* UIView+Screenshot.h */,
+				3C6A67BE1BAB5FD200A7C781 /* UIView+Screenshot.m */,
 			);
 			name = Canvas;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 		3CFA28271BA9C92C005A9551 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C6A67C31BAB803F00A7C781 /* ghost.png */,
 				3CD0AC591BA8ED370024BC7D /* LaunchScreen.xib */,
 				3CD0AC571BA8ED370024BC7D /* Images.xcassets */,
 				3CD0AC541BA8ED370024BC7D /* Main.storyboard */,
@@ -279,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CD0AC561BA8ED370024BC7D /* Main.storyboard in Resources */,
+				3C6A67C41BAB803F00A7C781 /* ghost.png in Resources */,
 				3CD0AC5B1BA8ED370024BC7D /* LaunchScreen.xib in Resources */,
 				3CD0AC581BA8ED370024BC7D /* Images.xcassets in Resources */,
 			);
@@ -305,6 +314,7 @@
 				3CFA28171BA9BC03005A9551 /* DTRootViewController.m in Sources */,
 				3CD0AC731BA8ED750024BC7D /* DTCanvas.m in Sources */,
 				3CD0AC531BA8ED370024BC7D /* DTDrawViewController.m in Sources */,
+				3C6A67BF1BAB5FD200A7C781 /* UIView+Screenshot.m in Sources */,
 				3CD0AC4A1BA8ED370024BC7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

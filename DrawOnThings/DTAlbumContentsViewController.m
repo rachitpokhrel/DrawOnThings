@@ -84,11 +84,7 @@
         DTDrawViewController *drawViewController = [segue destinationViewController];
         NSIndexPath *selectedCell = [self.collectionView indexPathsForSelectedItems][0];
         ALAsset *asset = self.assets[selectedCell.row];
-        ALAssetRepresentation *rep = [asset defaultRepresentation];
-        CGImageRef imageRef = [rep fullResolutionImage];
-        UIImage *image = [UIImage imageWithCGImage:imageRef];
-        drawViewController.image = image;
-        
+        drawViewController.asset = asset;
     }
 }
 @end

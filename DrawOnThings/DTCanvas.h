@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DTCanvas : UIView
-- (UIImage *)dtsnapshot;
+
+
 @end
