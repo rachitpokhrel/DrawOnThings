@@ -23,6 +23,8 @@
 		3CD0AC671BA8ED370024BC7D /* DrawOnThingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0AC661BA8ED370024BC7D /* DrawOnThingsTests.m */; };
 		3CD0AC731BA8ED750024BC7D /* DTCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0AC721BA8ED750024BC7D /* DTCanvas.m */; };
 		3CD0AC751BA9011E0024BC7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD0AC741BA9011E0024BC7D /* QuartzCore.framework */; };
+		3CE640291BADB02100FE467B /* DTTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE640281BADB02100FE467B /* DTTwitterViewController.m */; };
+		3CE6402C1BADD7D500FE467B /* DTFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6402B1BADD7D500FE467B /* DTFacebookViewController.m */; };
 		3CFA28141BA9AB1A005A9551 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CFA28131BA9AB1A005A9551 /* AssetsLibrary.framework */; };
 		3CFA28171BA9BC03005A9551 /* DTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFA28161BA9BC03005A9551 /* DTRootViewController.m */; };
 		3CFA281A1BA9BC3B005A9551 /* DTAlbumContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFA28191BA9BC3B005A9551 /* DTAlbumContentsViewController.m */; };
@@ -66,6 +68,10 @@
 		3CD0AC711BA8ED750024BC7D /* DTCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCanvas.h; sourceTree = "<group>"; };
 		3CD0AC721BA8ED750024BC7D /* DTCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCanvas.m; sourceTree = "<group>"; };
 		3CD0AC741BA9011E0024BC7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3CE640271BADB02100FE467B /* DTTwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTwitterViewController.h; sourceTree = "<group>"; };
+		3CE640281BADB02100FE467B /* DTTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTwitterViewController.m; sourceTree = "<group>"; };
+		3CE6402A1BADD7D500FE467B /* DTFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFacebookViewController.h; sourceTree = "<group>"; };
+		3CE6402B1BADD7D500FE467B /* DTFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFacebookViewController.m; sourceTree = "<group>"; };
 		3CFA28131BA9AB1A005A9551 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		3CFA28151BA9BC03005A9551 /* DTRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRootViewController.h; sourceTree = "<group>"; };
 		3CFA28161BA9BC03005A9551 /* DTRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRootViewController.m; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 		3CD0AC461BA8ED370024BC7D /* DrawOnThings */ = {
 			isa = PBXGroup;
 			children = (
+				3CE640261BADAD4800FE467B /* Social */,
 				3CFA28291BA9C98B005A9551 /* ImageAccess */,
 				3CFA28281BA9C968005A9551 /* AppDelegate */,
 				3CD0AC701BA8ED440024BC7D /* Canvas */,
@@ -179,6 +186,17 @@
 				3C6A67BE1BAB5FD200A7C781 /* UIView+Screenshot.m */,
 			);
 			name = Canvas;
+			sourceTree = "<group>";
+		};
+		3CE640261BADAD4800FE467B /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				3CE640271BADB02100FE467B /* DTTwitterViewController.h */,
+				3CE640281BADB02100FE467B /* DTTwitterViewController.m */,
+				3CE6402A1BADD7D500FE467B /* DTFacebookViewController.h */,
+				3CE6402B1BADD7D500FE467B /* DTFacebookViewController.m */,
+			);
+			name = Social;
 			sourceTree = "<group>";
 		};
 		3CFA28271BA9C92C005A9551 /* Resources */ = {
@@ -396,6 +414,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CE6402C1BADD7D500FE467B /* DTFacebookViewController.m in Sources */,
+				3CE640291BADB02100FE467B /* DTTwitterViewController.m in Sources */,
 				3CFA28261BA9BD8A005A9551 /* DTAssetDataInaccessibleViewController.m in Sources */,
 				3CFA281A1BA9BC3B005A9551 /* DTAlbumContentsViewController.m in Sources */,
 				3CD0AC4D1BA8ED370024BC7D /* DTAppDelegate.m in Sources */,

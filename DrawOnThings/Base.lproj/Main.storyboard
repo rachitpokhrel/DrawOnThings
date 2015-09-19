@@ -32,6 +32,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem id="MuI-xt-DpY"/>
+                                    <barButtonItem title="Share" id="oHE-8v-63t">
+                                        <connections>
+                                            <action selector="share:" destination="vXZ-lx-hvc" id="gHL-7N-7Pa"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0VL-do-Lhp" customClass="DTCanvas">
@@ -66,21 +71,60 @@
                                 <exclude reference="OIh-MR-cdh"/>
                                 <exclude reference="WgJ-lK-Ugc"/>
                                 <exclude reference="cTI-en-JpX"/>
+                                <exclude reference="t7i-Zx-BUU"/>
                                 <exclude reference="udF-2L-wiJ"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Mlg-8K-y34"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="canvas" destination="0VL-do-Lhp" id="88M-Kw-oUE"/>
                         <outlet property="imageView" destination="oVB-hM-5HQ" id="zfh-mo-Ld4"/>
+                        <segue destination="Umx-dB-07Z" kind="presentation" identifier="showTwitter" id="TTY-7G-fHS"/>
+                        <segue destination="nRm-s6-4ua" kind="presentation" identifier="showFacebook" id="FTz-R1-YOn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1646" y="933"/>
+        </scene>
+        <!--Twitter View Controller-->
+        <scene sceneID="rcl-8i-OqQ">
+            <objects>
+                <viewController id="Umx-dB-07Z" customClass="DTTwitterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fJj-19-K45"/>
+                        <viewControllerLayoutGuide type="bottom" id="AHQ-Yd-MWC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="plI-ej-PHd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKe-CQ-oh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="623"/>
+        </scene>
+        <!--Facebook View Controller-->
+        <scene sceneID="9Ak-O7-Y5A">
+            <objects>
+                <viewController id="nRm-s6-4ua" customClass="DTFacebookViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l3r-Lx-ikR"/>
+                        <viewControllerLayoutGuide type="bottom" id="tdb-ED-xcn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZyG-1U-ong">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqn-xx-gJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="1300"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="iIt-kp-5hD">

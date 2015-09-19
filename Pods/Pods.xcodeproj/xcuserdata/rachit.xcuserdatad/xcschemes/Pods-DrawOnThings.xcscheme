@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0ED580953BCDCD7409BAD32"
+               BlueprintIdentifier = "06D6FAEBF919E0AD4436C63C"
                BuildableName = "libPods-DrawOnThings.a"
                BlueprintName = "Pods-DrawOnThings"
                ReferencedContainer = "container:Pods.xcodeproj">

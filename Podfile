@@ -5,6 +5,7 @@ target 'DrawOnThings' do
        pod 'FBSDKCoreKit'
        pod 'FBSDKLoginKit'
        pod 'FBSDKShareKit'
+       pod 'MBProgressHUD'
 end
 
 target 'DrawOnThingsTests' do
