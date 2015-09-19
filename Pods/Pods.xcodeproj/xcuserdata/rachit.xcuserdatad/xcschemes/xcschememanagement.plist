@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-DrawOnThings.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>030D7B4949CB76E97B8BFE4B56EFF4AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20F4AF314908864F91F6AB2029C778F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4864F51A81CA7128C90B11DF805E2A24</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69E31ED96E9D050714FE62250899D912</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ECE023D485C9D87C5AAD4E9E59CF51D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

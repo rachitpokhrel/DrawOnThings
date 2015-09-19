@@ -8,7 +8,7 @@
 
 #import "DTDrawViewController.h"
 #import "DTCanvas.h"
-#import "UIView+Screenshot.h"
+//#import "UIView+Screenshot.h"
 
 @interface DTDrawViewController ()
 

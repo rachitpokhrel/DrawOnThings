@@ -9,7 +9,7 @@
 #import "UIView+Screenshot.h"
 
 @implementation UIView (Screenshot)
-
+/*
 - (UIImage *)pb_takeSnapshot {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
     [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
@@ -34,15 +34,7 @@ CGContextRef newBitmapContextSuitableForSize(CGSize size)
     bitmapBytesPerRow   = (pixelsWide * 4); //4
     bitmapByteCount     = (bitmapBytesPerRow * pixelsHigh);
     
-    /* bitmapData = malloc( bitmapByteCount );
-     
-     memset(bitmapData, 0, bitmapByteCount);  // set memory to black, alpha 0
-     
-     if (bitmapData == NULL)
-     {
-     return NULL;
-     }
-     */
+ 
     colorSpace = CGColorSpaceCreateDeviceRGB();
     
     context = CGBitmapContextCreate ( NULL, // instead of bitmapData
@@ -75,11 +67,6 @@ CGContextRef newBitmapContextSuitableForSize(CGSize size)
     // begin a graphics context of sufficient size
     CGContextRef ctx = newBitmapContextSuitableForSize(image.size);
     
-    // need to flip the transform matrix
-    // CoreGraphics has (0,0) in lower left
-    //CGContextScaleCTM(ctx, 1, -1);
-    //CGContextTranslateCTM(ctx, 0, -image.size.height);
-    
     // draw original image into the context
     CGRect imageRect = CGRectMake(0, 0, image.size.width, image.size.height);
     CGContextDrawImage(ctx, imageRect, image.CGImage);
@@ -90,6 +77,7 @@ CGContextRef newBitmapContextSuitableForSize(CGSize size)
     CGImageRef cgImage = CGBitmapContextCreateImage(ctx);
     UIImage *retImage = [UIImage imageWithCGImage:cgImage];
     CGImageRelease(cgImage);
+    CGContextRelease(ctx);
     
     return [self processUsingPixels:retImage blendImage:drawnImage];
 }
@@ -130,11 +118,16 @@ CGContextRef newBitmapContextSuitableForSize(CGSize size)
     CGImageRef ghostCGImage = [ghostImage CGImage];
     
     // 2.1 Calculate the size & position of the ghost
-    CGFloat ghostImageAspectRatio = ghostImage.size.width / ghostImage.size.height;
-    NSInteger targetGhostWidth = inputWidth * 0.25;
+    
+    CGImageRef drawnCGImage = [drawnImage CGImage];
+    NSUInteger drawnWidth = CGImageGetWidth(drawnCGImage);
+    NSUInteger drawnHeight = CGImageGetHeight(drawnCGImage);
+    //CGFloat ghostImageAspectRatio = ghostImage.size.width / ghostImage.size.height;
+    //NSInteger targetGhostWidth = inputWidth * 0.25;
     //CGSize ghostSize = CGSizeMake(targetGhostWidth, targetGhostWidth / ghostImageAspectRatio);
     CGSize ghostSize = CGSizeMake(inputWidth, inputHeight);
-    CGPoint ghostOrigin = CGPointMake(inputWidth * 0.5, inputHeight*0.2);
+    //CGPoint ghostOrigin = CGPointMake(inputWidth * 0.5, inputHeight*0.2);
+    CGPoint ghostOrigin = CGPointMake(self.frame.origin.x, self.frame.origin.y);
     
     // 2.2 Scale & Get pixels of the ghost
     NSUInteger ghostBytesPerRow = bytesPerPixel * ghostSize.width;
@@ -158,7 +151,7 @@ CGContextRef newBitmapContextSuitableForSize(CGSize size)
             UInt32 ghostColor = *ghostPixel;
             
             // Blend the ghost with 50% alpha
-            CGFloat ghostAlpha = 0.5f * (A(ghostColor) / 255.0);
+            CGFloat ghostAlpha = 1.0f * (A(ghostColor) / 255.0);
             UInt32 newR = R(inputColor) * (1 - ghostAlpha) + R(ghostColor) * ghostAlpha;
             UInt32 newG = G(inputColor) * (1 - ghostAlpha) + G(ghostColor) * ghostAlpha;
             UInt32 newB = B(inputColor) * (1 - ghostAlpha) + B(ghostColor) * ghostAlpha;
@@ -171,20 +164,20 @@ CGContextRef newBitmapContextSuitableForSize(CGSize size)
             *inputPixel = RGBAMake(newR, newG, newB, A(inputColor));
         }
     }
-    
-    // 3. Convert the image to Black & White
+ 
+     3. Convert the image to Black & White
     for (NSUInteger j = 0; j < inputHeight; j++) {
         for (NSUInteger i = 0; i < inputWidth; i++) {
             UInt32 * currentPixel = inputPixels + (j * inputWidth) + i;
             UInt32 color = *currentPixel;
             
-            // Average of RGB = greyscale
+             Average of RGB = greyscale
             UInt32 averageColor = (R(color) + G(color) + B(color)) / 3.0;
             
             *currentPixel = RGBAMake(averageColor, averageColor, averageColor, A(color));
         }
     }
-    
+ 
     // 4. Create a new UIImage
     CGImageRef newCGImage = CGBitmapContextCreateImage(context);
     UIImage * processedImage = [UIImage imageWithCGImage:newCGImage];
@@ -195,7 +188,6 @@ CGContextRef newBitmapContextSuitableForSize(CGSize size)
     CGContextRelease(ghostContext);
     free(inputPixels);
     free(ghostPixels);
-    
     return processedImage;
 }
 #undef RGBAMake
@@ -206,5 +198,5 @@ CGContextRef newBitmapContextSuitableForSize(CGSize size)
 #undef Mask8
 
 #pragma mark Helpers
-
+*/
 @end

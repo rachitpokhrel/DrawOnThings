@@ -10,5 +10,6 @@
 
 @interface DTCanvas : UIView
 
-
+- (UIImage *)pb_takeSnapshot;
+- (UIImage *)imageByDrawingOnImageCG:(UIImage *)image;
 @end

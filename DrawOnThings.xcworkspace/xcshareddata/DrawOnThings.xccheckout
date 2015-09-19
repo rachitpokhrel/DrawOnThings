@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>961A1AE7-C617-4674-AD4A-514E33FA5C9D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DrawOnThings</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>71597D598A3DE93B8DF9DF4743699AFED9BDEFC9</key>
+		<string>https://github.com/rachitpokhrel/DrawOnThings.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DrawOnThings.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>71597D598A3DE93B8DF9DF4743699AFED9BDEFC9</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rachitpokhrel/DrawOnThings.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>71597D598A3DE93B8DF9DF4743699AFED9BDEFC9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>71597D598A3DE93B8DF9DF4743699AFED9BDEFC9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DrawOnThings</string>
+		</dict>
+	</array>
+</dict>
+</plist>

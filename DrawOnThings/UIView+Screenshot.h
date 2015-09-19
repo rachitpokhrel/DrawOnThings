@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (Screenshot)
-- (UIImage *)pb_takeSnapshot;
-- (UIImage *)imageByDrawingOnImageCG:(UIImage *)image;
+//- (UIImage *)pb_takeSnapshot;
+//- (UIImage *)imageByDrawingOnImageCG:(UIImage *)image;
 @end
