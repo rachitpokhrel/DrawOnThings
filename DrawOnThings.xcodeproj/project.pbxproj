@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4961FE1BAF10DB00B3F1D8 /* DTFacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4961FD1BAF10DB00B3F1D8 /* DTFacebookLoginViewController.m */; };
 		3C6A67BF1BAB5FD200A7C781 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A67BE1BAB5FD200A7C781 /* UIView+Screenshot.m */; };
 		3C6A67C41BAB803F00A7C781 /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A67C31BAB803F00A7C781 /* ghost.png */; };
 		3C7AF9F41BACE7D9000A602F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7AF9F01BACE7D9000A602F /* Fabric.framework */; };
@@ -25,7 +26,6 @@
 		3CD0AC751BA9011E0024BC7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD0AC741BA9011E0024BC7D /* QuartzCore.framework */; };
 		3CE640291BADB02100FE467B /* DTTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE640281BADB02100FE467B /* DTTwitterViewController.m */; };
 		3CE6402C1BADD7D500FE467B /* DTFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6402B1BADD7D500FE467B /* DTFacebookViewController.m */; };
-		3CE6402F1BAE131900FE467B /* DTTwitterShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6402E1BAE131900FE467B /* DTTwitterShare.m */; };
 		3CE640321BAE177800FE467B /* DTTwitterLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE640311BAE177800FE467B /* DTTwitterLoginViewController.m */; };
 		3CFA28141BA9AB1A005A9551 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CFA28131BA9AB1A005A9551 /* AssetsLibrary.framework */; };
 		3CFA28171BA9BC03005A9551 /* DTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFA28161BA9BC03005A9551 /* DTRootViewController.m */; };
@@ -46,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		208722AD9A4C09D11754300F /* Pods-DrawOnThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawOnThings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawOnThings/Pods-DrawOnThings.debug.xcconfig"; sourceTree = "<group>"; };
+		3C4961FC1BAF10DB00B3F1D8 /* DTFacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFacebookLoginViewController.h; sourceTree = "<group>"; };
+		3C4961FD1BAF10DB00B3F1D8 /* DTFacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFacebookLoginViewController.m; sourceTree = "<group>"; };
 		3C6A67BD1BAB5FD200A7C781 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
 		3C6A67BE1BAB5FD200A7C781 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		3C6A67C31BAB803F00A7C781 /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		3CE640281BADB02100FE467B /* DTTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTwitterViewController.m; sourceTree = "<group>"; };
 		3CE6402A1BADD7D500FE467B /* DTFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFacebookViewController.h; sourceTree = "<group>"; };
 		3CE6402B1BADD7D500FE467B /* DTFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFacebookViewController.m; sourceTree = "<group>"; };
-		3CE6402D1BAE131900FE467B /* DTTwitterShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTwitterShare.h; sourceTree = "<group>"; };
-		3CE6402E1BAE131900FE467B /* DTTwitterShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTwitterShare.m; sourceTree = "<group>"; };
 		3CE640301BAE177800FE467B /* DTTwitterLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTwitterLoginViewController.h; sourceTree = "<group>"; };
 		3CE640311BAE177800FE467B /* DTTwitterLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTwitterLoginViewController.m; sourceTree = "<group>"; };
 		3CFA28131BA9AB1A005A9551 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -201,10 +201,10 @@
 				3CE640281BADB02100FE467B /* DTTwitterViewController.m */,
 				3CE6402A1BADD7D500FE467B /* DTFacebookViewController.h */,
 				3CE6402B1BADD7D500FE467B /* DTFacebookViewController.m */,
-				3CE6402D1BAE131900FE467B /* DTTwitterShare.h */,
-				3CE6402E1BAE131900FE467B /* DTTwitterShare.m */,
 				3CE640301BAE177800FE467B /* DTTwitterLoginViewController.h */,
 				3CE640311BAE177800FE467B /* DTTwitterLoginViewController.m */,
+				3C4961FC1BAF10DB00B3F1D8 /* DTFacebookLoginViewController.h */,
+				3C4961FD1BAF10DB00B3F1D8 /* DTFacebookLoginViewController.m */,
 			);
 			name = Social;
 			sourceTree = "<group>";
@@ -434,8 +434,8 @@
 				3CFA28171BA9BC03005A9551 /* DTRootViewController.m in Sources */,
 				3CD0AC731BA8ED750024BC7D /* DTCanvas.m in Sources */,
 				3CD0AC531BA8ED370024BC7D /* DTDrawViewController.m in Sources */,
-				3CE6402F1BAE131900FE467B /* DTTwitterShare.m in Sources */,
 				3C6A67BF1BAB5FD200A7C781 /* UIView+Screenshot.m in Sources */,
+				3C4961FE1BAF10DB00B3F1D8 /* DTFacebookLoginViewController.m in Sources */,
 				3CD0AC4A1BA8ED370024BC7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,8 +21,7 @@
     self.imageView.image = self.image;
     NSString *authToken = [Twitter sharedInstance].session.authToken;
     NSString *authSecret = [Twitter sharedInstance].session.authTokenSecret;
-    NSString *ID = [Twitter sharedInstance].session.userID;
-    NSString *username = [Twitter sharedInstance].session.userName;
+
     
     [[Twitter sharedInstance] logInWithExistingAuthToken:authToken authTokenSecret:authSecret completion:^(TWTRSession *session, NSError *error) {
         if (session)

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jpl-Yc-fLe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jpl-Yc-fLe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -84,6 +85,8 @@
                         <outlet property="imageView" destination="oVB-hM-5HQ" id="zfh-mo-Ld4"/>
                         <segue destination="nRm-s6-4ua" kind="presentation" identifier="showFacebook" id="FTz-R1-YOn"/>
                         <segue destination="hF3-AK-9sk" kind="presentation" identifier="showTwitter" id="4Ry-t2-SF6"/>
+                        <segue destination="Umx-dB-07Z" kind="show" identifier="directShareTwitter" id="fsm-yL-BeJ"/>
+                        <segue destination="Mkp-ml-nOy" kind="show" identifier="directShareFacebook" id="i22-s0-jV7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -145,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="3153" y="249"/>
         </scene>
-        <!--Facebook View Controller-->
+        <!--Facebook Login View Controller-->
         <scene sceneID="9Ak-O7-Y5A">
             <objects>
-                <viewController id="nRm-s6-4ua" customClass="DTFacebookViewController" sceneMemberID="viewController">
+                <viewController id="nRm-s6-4ua" customClass="DTFacebookLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l3r-Lx-ikR"/>
                         <viewControllerLayoutGuide type="bottom" id="tdb-ED-xcn"/>
@@ -156,12 +159,47 @@
                     <view key="view" contentMode="scaleToFill" id="ZyG-1U-ong">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpi-6F-HxK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="lpi-6F-HxK" id="ZZZ-dc-C3L"/>
+                        <segue destination="Mkp-ml-nOy" kind="showDetail" identifier="showFacebookView" id="3xp-nd-cMi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqn-xx-gJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2373" y="1300"/>
+        </scene>
+        <!--Facebook View Controller-->
+        <scene sceneID="2eh-fM-BEL">
+            <objects>
+                <viewController id="Mkp-ml-nOy" customClass="DTFacebookViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c3D-Vj-dFm"/>
+                        <viewControllerLayoutGuide type="bottom" id="LD8-8e-grz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ipq-Xx-ARd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feR-by-AAO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="feR-by-AAO" id="4oA-9O-vTn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LId-Si-duf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3122" y="1297"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="iIt-kp-5hD">
@@ -173,20 +211,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="f9D-GZ-DVN" detailTextLabel="4ZD-WN-f1R" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="aJZ-MM-jZH">
-                                <rect key="frame" x="0.0" y="86" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="86" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aJZ-MM-jZH" id="wqr-R7-LEc">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f9D-GZ-DVN">
-                                            <rect key="frame" x="15" y="6" width="34" height="22"/>
+                                            <rect key="frame" x="15" y="6" width="36" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ZD-WN-f1R">
-                                            <rect key="frame" x="15" y="28" width="43" height="15"/>
+                                            <rect key="frame" x="15" y="28" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -318,4 +356,8 @@
             <point key="canvasLocation" x="-209" y="1613"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fsm-yL-BeJ"/>
+        <segue reference="i22-s0-jV7"/>
+    </inferredMetricsTieBreakers>
 </document>

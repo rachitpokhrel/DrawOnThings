@@ -9,7 +9,11 @@
 #import "DTDrawViewController.h"
 #import "DTCanvas.h"
 #import "DTTwitterLoginViewController.h"
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "DTTwitterViewController.h"
+#import "DTFacebookLoginViewController.h"
+#import "DTFacebookViewController.h"
+#import <TwitterKit/TwitterKit.h>
+
 
 @interface DTDrawViewController ()
 @property (nonatomic, strong) UIImage *processedImage;
@@ -53,75 +57,29 @@
                                                                    message:@""
                                                             preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction* facebookAction = [UIAlertAction actionWithTitle:@"Facebook" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        [self facebookLogin];
+        if ([FBSDKAccessToken currentAccessToken])
+            [self performSegueWithIdentifier:@"directShareFacebook" sender:self];
+        else
+            [self performSegueWithIdentifier:@"showFacebook" sender:self];
     }];
     UIAlertAction* twitterAction = [UIAlertAction actionWithTitle:@"Twitter" style:
         UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        [self performSegueWithIdentifier:@"showTwitter" sender:self];
+         if ([Twitter sharedInstance].session.authToken)
+             [self performSegueWithIdentifier:@"directShareTwitter" sender:self];
+        else
+            [self performSegueWithIdentifier:@"showTwitter" sender:self];
     }];
     
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:
                                     UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
     
                                     }];
-    [alert addAction:cancelAction];
     [alert addAction:facebookAction];
     [alert addAction:twitterAction];
+    [alert addAction:cancelAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
--(void)twitterLogin
-{
-    UIAlertController *twitterLogin = [UIAlertController alertControllerWithTitle:@"Login" message:@"Twitter" preferredStyle:UIAlertControllerStyleAlert];
-    [twitterLogin addTextFieldWithConfigurationHandler:^(UITextField *textFied){
-        textFied.placeholder = @"Username";
-    } ];
-    [twitterLogin addTextFieldWithConfigurationHandler:^(UITextField *textFied){
-        textFied.placeholder = @"Password";
-        textFied.secureTextEntry = YES;
-    }];
-    
-    UIAlertAction* loginAction = [UIAlertAction actionWithTitle:@"Sign In" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-        NSString *username = twitterLogin.textFields[0];
-        NSString *password = twitterLogin.textFields[1];
-        
-    }];
-    
-    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-        
-    }];
-    
-    [twitterLogin addAction:loginAction];
-    [twitterLogin addAction:cancelAction];
-    [self presentViewController:twitterLogin animated:YES completion:nil];
-}
-
-
--(void)facebookLogin
-{
-    UIAlertController *facebookLogin = [UIAlertController alertControllerWithTitle:@"Login" message:@"Facebook" preferredStyle:UIAlertControllerStyleAlert];
-    [facebookLogin addTextFieldWithConfigurationHandler:^(UITextField *textFied){
-        textFied.placeholder = @"Username";
-    } ];
-    [facebookLogin addTextFieldWithConfigurationHandler:^(UITextField *textFied){
-        textFied.placeholder = @"Password";
-        textFied.secureTextEntry = YES;
-    }];
-    
-    UIAlertAction* loginAction = [UIAlertAction actionWithTitle:@"Sign In" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-        NSString *username = facebookLogin.textFields[0];
-        NSString *password = facebookLogin.textFields[1];
-        
-    }];
-    
-    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-    
-    }];
-    
-    [facebookLogin addAction:loginAction];
-    [facebookLogin addAction:cancelAction];
-    [self presentViewController:facebookLogin animated:YES completion:nil];
-}
 
 
  #pragma mark - Navigation
@@ -133,9 +91,21 @@
          DTTwitterLoginViewController *controller = [segue destinationViewController];
          controller.image = self.processedImage;
      }
-     
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
+     if ([segue.identifier isEqualToString:@"showFacebook"])
+     {
+         DTFacebookLoginViewController *controller = [segue destinationViewController];
+         controller.image = self.processedImage;
+     }
+     if ([segue.identifier isEqualToString:@"directShareTwitter"])
+     {
+         DTTwitterViewController *controller = [segue destinationViewController];
+         controller.image = self.processedImage;
+     }
+     if ([segue.identifier isEqualToString:@"directShareFacebook"])
+     {
+         DTFacebookViewController *controller = [segue destinationViewController];
+         controller.image = self.processedImage;
+     }
  }
 
 

@@ -9,7 +9,6 @@
 #import "DTTwitterLoginViewController.h"
 #import "DTTwitterViewController.h"
 #import <TwitterKit/TwitterKit.h>
-#import "DTTwitterShare.h"
 
 @interface DTTwitterLoginViewController ()
 

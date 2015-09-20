@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
 
-@interface DTFacebookViewController : UIViewController
-
+@interface DTFacebookViewController : UIViewController<FBSDKSharingDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImage *image;
 @end
