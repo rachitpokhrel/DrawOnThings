@@ -1,5 +1,5 @@
 //
-//  DTTwitterViewController.h
+//  DTTwitterLoginViewController.h
 //  DrawOnThings
 //
 //  Created by Rachit on 9/19/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DTTwitterViewController : UIViewController
+@interface DTTwitterLoginViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) UIImage *image;

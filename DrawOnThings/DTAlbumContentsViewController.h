@@ -12,4 +12,5 @@
 @interface DTAlbumContentsViewController : UICollectionViewController
 @property (nonatomic, strong) NSMutableArray *assets;
 @property (nonatomic, strong) ALAssetsGroup *assetsGroup;
+-(IBAction)unwindToAlbumViewController:(UIStoryboardSegue*)storyboard;
 @end

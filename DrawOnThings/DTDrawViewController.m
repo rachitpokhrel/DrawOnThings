@@ -8,13 +8,15 @@
 
 #import "DTDrawViewController.h"
 #import "DTCanvas.h"
-//#import "UIView+Screenshot.h"
+#import "DTTwitterLoginViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface DTDrawViewController ()
-
+@property (nonatomic, strong) UIImage *processedImage;
 @end
 
 @implementation DTDrawViewController{
+    
 }
 
 - (void)viewDidLoad
@@ -30,11 +32,13 @@
     CGImageRef imageRef = [rep fullResolutionImage];
     UIImage *image = [UIImage imageWithCGImage:imageRef];
     self.imageView.image = image;
+    self.processedImage = image;
 }
 
 - (IBAction)save:(id)sender
 {
     UIImage *image = [self.canvas imageByDrawingOnImageCG:self.imageView.image];
+    self.processedImage = image;
     NSData *imageData = UIImagePNGRepresentation(image);
     ALAssetRepresentation *rep = [self.asset defaultRepresentation];
     NSDictionary *dictionary = [rep metadata];
@@ -53,8 +57,14 @@
     }];
     UIAlertAction* twitterAction = [UIAlertAction actionWithTitle:@"Twitter" style:
         UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-            [self twitterLogin];
+        [self performSegueWithIdentifier:@"showTwitter" sender:self];
     }];
+    
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:
+                                    UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+    
+                                    }];
+    [alert addAction:cancelAction];
     [alert addAction:facebookAction];
     [alert addAction:twitterAction];
     [self presentViewController:alert animated:YES completion:nil];
@@ -72,7 +82,9 @@
     }];
     
     UIAlertAction* loginAction = [UIAlertAction actionWithTitle:@"Sign In" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-        [self performSegueWithIdentifier:@"showTwitter" sender:self];
+        NSString *username = twitterLogin.textFields[0];
+        NSString *password = twitterLogin.textFields[1];
+        
     }];
     
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
@@ -97,7 +109,9 @@
     }];
     
     UIAlertAction* loginAction = [UIAlertAction actionWithTitle:@"Sign In" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-        [self performSegueWithIdentifier:@"showFacebook" sender:self];
+        NSString *username = facebookLogin.textFields[0];
+        NSString *password = facebookLogin.textFields[1];
+        
     }];
     
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
@@ -109,19 +123,17 @@
     [self presentViewController:facebookLogin animated:YES completion:nil];
 }
 
--(void)loginTwitterWithUsername:(NSString*)username password:(NSString*)password
-{
-    
-}
 
--(void)loginFacebookWithUsername:(NSString*)username password:(NSString*)password
-{
-    
-}
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     if ([segue.identifier isEqualToString:@"showTwitter"])
+     {
+         DTTwitterLoginViewController *controller = [segue destinationViewController];
+         controller.image = self.processedImage;
+     }
+     
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
  }

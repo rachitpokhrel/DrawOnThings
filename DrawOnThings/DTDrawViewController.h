@@ -10,7 +10,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "DTCanvas.h"
 
-@interface DTDrawViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface DTDrawViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet DTCanvas *canvas;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

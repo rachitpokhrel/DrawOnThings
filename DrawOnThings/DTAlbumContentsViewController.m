@@ -78,6 +78,11 @@
 
 #pragma mark - Segue support
 
+-(IBAction)unwindToAlbumViewController:(UIStoryboardSegue*)storyboard
+{
+    
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"showPhoto"]) {
