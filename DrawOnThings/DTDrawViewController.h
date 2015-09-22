@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet DTCanvas *canvas;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) ALAsset *asset;
+@property (strong, nonatomic) UIImage *image;
 @property (weak, nonatomic) IBOutlet UIPickerView *socialPickerView;
 - (IBAction)save:(id)sender;
 - (IBAction)share:(id)sender;

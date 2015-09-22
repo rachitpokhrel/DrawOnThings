@@ -14,6 +14,23 @@
 		3C7AF9F51BACE7D9000A602F /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7AF9F11BACE7D9000A602F /* TwitterKit.framework */; };
 		3C7AF9F61BACE7D9000A602F /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C7AF9F21BACE7D9000A602F /* TwitterKitResources.bundle */; };
 		3C7AF9F71BACE7D9000A602F /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7AF9F31BACE7D9000A602F /* TwitterCore.framework */; };
+		3C8BC1BA1BAFF63100E08C17 /* UIViewController+ImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1B91BAFF63100E08C17 /* UIViewController+ImageAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1D51BB0EB4100E08C17 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1BC1BB0EB4100E08C17 /* ELCAlbumPickerController.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1D61BB0EB4100E08C17 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1BE1BB0EB4100E08C17 /* ELCAsset.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1D71BB0EB4100E08C17 /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1C01BB0EB4100E08C17 /* ELCAssetCell.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1D81BB0EB4100E08C17 /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1C41BB0EB4100E08C17 /* ELCAssetTablePicker.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1D91BB0EB4100E08C17 /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1C61BB0EB4100E08C17 /* ELCImagePickerController.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1DA1BB0EB4100E08C17 /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BC1C71BB0EB4100E08C17 /* ELCAlbumPickerController.xib */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1DB1BB0EB4100E08C17 /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BC1C81BB0EB4100E08C17 /* ELCAssetPicker.xib */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1DC1BB0EB4100E08C17 /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BC1C91BB0EB4100E08C17 /* ELCAssetTablePicker.xib */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1DD1BB0EB4100E08C17 /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BC1CA1BB0EB4100E08C17 /* Overlay.png */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1DE1BB0EB4100E08C17 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8BC1CB1BB0EB4100E08C17 /* Overlay@2x.png */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1DF1BB0EB4100E08C17 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1CF1BB0EB4100E08C17 /* UIImage+Alpha.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1E01BB0EB4100E08C17 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1D11BB0EB4100E08C17 /* UIImage+Resize.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1E11BB0EB4100E08C17 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1D31BB0EB4100E08C17 /* UIImage+RoundedCorner.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1E51BB0F37A00E08C17 /* DTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1E41BB0F37A00E08C17 /* DTPhoto.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1E81BB0F39500E08C17 /* DTPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1E71BB0F39500E08C17 /* DTPhotoManager.m */; settings = {ASSET_TAGS = (); }; };
+		3C8BC1EB1BB1038B00E08C17 /* DTutililty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BC1EA1BB1038B00E08C17 /* DTutililty.m */; settings = {ASSET_TAGS = (); }; };
 		3CD0AC4A1BA8ED370024BC7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0AC491BA8ED370024BC7D /* main.m */; };
 		3CD0AC4D1BA8ED370024BC7D /* DTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0AC4C1BA8ED370024BC7D /* DTAppDelegate.m */; };
 		3CD0AC501BA8ED370024BC7D /* DrawOnThings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0AC4E1BA8ED370024BC7D /* DrawOnThings.xcdatamodeld */; };
@@ -55,6 +72,37 @@
 		3C7AF9F11BACE7D9000A602F /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		3C7AF9F21BACE7D9000A602F /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		3C7AF9F31BACE7D9000A602F /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		3C8BC1B81BAFF63100E08C17 /* UIViewController+ImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageAdditions.h"; sourceTree = "<group>"; };
+		3C8BC1B91BAFF63100E08C17 /* UIViewController+ImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageAdditions.m"; sourceTree = "<group>"; };
+		3C8BC1BB1BB0EB4100E08C17 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
+		3C8BC1BC1BB0EB4100E08C17 /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
+		3C8BC1BD1BB0EB4100E08C17 /* ELCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAsset.h; sourceTree = "<group>"; };
+		3C8BC1BE1BB0EB4100E08C17 /* ELCAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAsset.m; sourceTree = "<group>"; };
+		3C8BC1BF1BB0EB4100E08C17 /* ELCAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetCell.h; sourceTree = "<group>"; };
+		3C8BC1C01BB0EB4100E08C17 /* ELCAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetCell.m; sourceTree = "<group>"; };
+		3C8BC1C11BB0EB4100E08C17 /* ELCAssetPickerFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetPickerFilterDelegate.h; sourceTree = "<group>"; };
+		3C8BC1C21BB0EB4100E08C17 /* ELCAssetSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetSelectionDelegate.h; sourceTree = "<group>"; };
+		3C8BC1C31BB0EB4100E08C17 /* ELCAssetTablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetTablePicker.h; sourceTree = "<group>"; };
+		3C8BC1C41BB0EB4100E08C17 /* ELCAssetTablePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetTablePicker.m; sourceTree = "<group>"; };
+		3C8BC1C51BB0EB4100E08C17 /* ELCImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCImagePickerController.h; sourceTree = "<group>"; };
+		3C8BC1C61BB0EB4100E08C17 /* ELCImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCImagePickerController.m; sourceTree = "<group>"; };
+		3C8BC1C71BB0EB4100E08C17 /* ELCAlbumPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAlbumPickerController.xib; sourceTree = "<group>"; };
+		3C8BC1C81BB0EB4100E08C17 /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
+		3C8BC1C91BB0EB4100E08C17 /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
+		3C8BC1CA1BB0EB4100E08C17 /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
+		3C8BC1CB1BB0EB4100E08C17 /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
+		3C8BC1CE1BB0EB4100E08C17 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		3C8BC1CF1BB0EB4100E08C17 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		3C8BC1D01BB0EB4100E08C17 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		3C8BC1D11BB0EB4100E08C17 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		3C8BC1D21BB0EB4100E08C17 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		3C8BC1D31BB0EB4100E08C17 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		3C8BC1E31BB0F37A00E08C17 /* DTPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPhoto.h; sourceTree = "<group>"; };
+		3C8BC1E41BB0F37A00E08C17 /* DTPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPhoto.m; sourceTree = "<group>"; };
+		3C8BC1E61BB0F39500E08C17 /* DTPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPhotoManager.h; sourceTree = "<group>"; };
+		3C8BC1E71BB0F39500E08C17 /* DTPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPhotoManager.m; sourceTree = "<group>"; };
+		3C8BC1E91BB1038B00E08C17 /* DTutililty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTutililty.h; sourceTree = "<group>"; };
+		3C8BC1EA1BB1038B00E08C17 /* DTutililty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTutililty.m; sourceTree = "<group>"; };
 		3CD0AC441BA8ED370024BC7D /* DrawOnThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawOnThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD0AC481BA8ED370024BC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CD0AC491BA8ED370024BC7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -122,9 +170,77 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3C8BC1B71BAFF5BD00E08C17 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3C8BC1B81BAFF63100E08C17 /* UIViewController+ImageAdditions.h */,
+				3C8BC1B91BAFF63100E08C17 /* UIViewController+ImageAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		3C8BC1CC1BB0EB4100E08C17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3C8BC1C71BB0EB4100E08C17 /* ELCAlbumPickerController.xib */,
+				3C8BC1C81BB0EB4100E08C17 /* ELCAssetPicker.xib */,
+				3C8BC1C91BB0EB4100E08C17 /* ELCAssetTablePicker.xib */,
+				3C8BC1CA1BB0EB4100E08C17 /* Overlay.png */,
+				3C8BC1CB1BB0EB4100E08C17 /* Overlay@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3C8BC1CD1BB0EB4100E08C17 /* ELCImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				3C8BC1BB1BB0EB4100E08C17 /* ELCAlbumPickerController.h */,
+				3C8BC1BC1BB0EB4100E08C17 /* ELCAlbumPickerController.m */,
+				3C8BC1BD1BB0EB4100E08C17 /* ELCAsset.h */,
+				3C8BC1BE1BB0EB4100E08C17 /* ELCAsset.m */,
+				3C8BC1BF1BB0EB4100E08C17 /* ELCAssetCell.h */,
+				3C8BC1C01BB0EB4100E08C17 /* ELCAssetCell.m */,
+				3C8BC1C11BB0EB4100E08C17 /* ELCAssetPickerFilterDelegate.h */,
+				3C8BC1C21BB0EB4100E08C17 /* ELCAssetSelectionDelegate.h */,
+				3C8BC1C31BB0EB4100E08C17 /* ELCAssetTablePicker.h */,
+				3C8BC1C41BB0EB4100E08C17 /* ELCAssetTablePicker.m */,
+				3C8BC1C51BB0EB4100E08C17 /* ELCImagePickerController.h */,
+				3C8BC1C61BB0EB4100E08C17 /* ELCImagePickerController.m */,
+				3C8BC1CC1BB0EB4100E08C17 /* Resources */,
+			);
+			name = ELCImagePicker;
+			path = ../../../Downloads/GooglyPuff_Start_1/GooglyPuff/ELCImagePicker;
+			sourceTree = "<group>";
+		};
+		3C8BC1D41BB0EB4100E08C17 /* UIImage Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3C8BC1CE1BB0EB4100E08C17 /* UIImage+Alpha.h */,
+				3C8BC1CF1BB0EB4100E08C17 /* UIImage+Alpha.m */,
+				3C8BC1D01BB0EB4100E08C17 /* UIImage+Resize.h */,
+				3C8BC1D11BB0EB4100E08C17 /* UIImage+Resize.m */,
+				3C8BC1D21BB0EB4100E08C17 /* UIImage+RoundedCorner.h */,
+				3C8BC1D31BB0EB4100E08C17 /* UIImage+RoundedCorner.m */,
+			);
+			name = "UIImage Categories";
+			path = ../../../Downloads/GooglyPuff_Start_1/GooglyPuff;
+			sourceTree = "<group>";
+		};
+		3C8BC1E21BB0F36000E08C17 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				3C8BC1E31BB0F37A00E08C17 /* DTPhoto.h */,
+				3C8BC1E41BB0F37A00E08C17 /* DTPhoto.m */,
+				3C8BC1E61BB0F39500E08C17 /* DTPhotoManager.h */,
+				3C8BC1E71BB0F39500E08C17 /* DTPhotoManager.m */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
 		3CD0AC3B1BA8ED370024BC7D = {
 			isa = PBXGroup;
 			children = (
+				3C8BC1B71BAFF5BD00E08C17 /* Categories */,
 				3CFA282B1BA9CA06005A9551 /* Library */,
 				3CFA282A1BA9C9DE005A9551 /* Model */,
 				3CFA28271BA9C92C005A9551 /* Resources */,
@@ -148,6 +264,9 @@
 		3CD0AC461BA8ED370024BC7D /* DrawOnThings */ = {
 			isa = PBXGroup;
 			children = (
+				3C8BC1E21BB0F36000E08C17 /* Photos */,
+				3C8BC1CD1BB0EB4100E08C17 /* ELCImagePicker */,
+				3C8BC1D41BB0EB4100E08C17 /* UIImage Categories */,
 				3CE640261BADAD4800FE467B /* Social */,
 				3CFA28291BA9C98B005A9551 /* ImageAccess */,
 				3CFA28281BA9C968005A9551 /* AppDelegate */,
@@ -225,6 +344,8 @@
 			children = (
 				3CD0AC4B1BA8ED370024BC7D /* DTAppDelegate.h */,
 				3CD0AC4C1BA8ED370024BC7D /* DTAppDelegate.m */,
+				3C8BC1E91BB1038B00E08C17 /* DTutililty.h */,
+				3C8BC1EA1BB1038B00E08C17 /* DTutililty.m */,
 			);
 			name = AppDelegate;
 			sourceTree = "<group>";
@@ -356,9 +477,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8BC1DA1BB0EB4100E08C17 /* ELCAlbumPickerController.xib in Resources */,
+				3C8BC1DB1BB0EB4100E08C17 /* ELCAssetPicker.xib in Resources */,
+				3C8BC1DC1BB0EB4100E08C17 /* ELCAssetTablePicker.xib in Resources */,
 				3CD0AC561BA8ED370024BC7D /* Main.storyboard in Resources */,
 				3C6A67C41BAB803F00A7C781 /* ghost.png in Resources */,
+				3C8BC1DE1BB0EB4100E08C17 /* Overlay@2x.png in Resources */,
 				3CD0AC5B1BA8ED370024BC7D /* LaunchScreen.xib in Resources */,
+				3C8BC1DD1BB0EB4100E08C17 /* Overlay.png in Resources */,
 				3CD0AC581BA8ED370024BC7D /* Images.xcassets in Resources */,
 				3C7AF9F61BACE7D9000A602F /* TwitterKitResources.bundle in Resources */,
 			);
@@ -424,19 +550,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8BC1EB1BB1038B00E08C17 /* DTutililty.m in Sources */,
 				3CE6402C1BADD7D500FE467B /* DTFacebookViewController.m in Sources */,
+				3C8BC1D71BB0EB4100E08C17 /* ELCAssetCell.m in Sources */,
 				3CE640291BADB02100FE467B /* DTTwitterViewController.m in Sources */,
 				3CE640321BAE177800FE467B /* DTTwitterLoginViewController.m in Sources */,
+				3C8BC1D81BB0EB4100E08C17 /* ELCAssetTablePicker.m in Sources */,
 				3CFA28261BA9BD8A005A9551 /* DTAssetDataInaccessibleViewController.m in Sources */,
 				3CFA281A1BA9BC3B005A9551 /* DTAlbumContentsViewController.m in Sources */,
+				3C8BC1D51BB0EB4100E08C17 /* ELCAlbumPickerController.m in Sources */,
+				3C8BC1DF1BB0EB4100E08C17 /* UIImage+Alpha.m in Sources */,
 				3CD0AC4D1BA8ED370024BC7D /* DTAppDelegate.m in Sources */,
+				3C8BC1BA1BAFF63100E08C17 /* UIViewController+ImageAdditions.m in Sources */,
 				3CD0AC501BA8ED370024BC7D /* DrawOnThings.xcdatamodeld in Sources */,
+				3C8BC1D61BB0EB4100E08C17 /* ELCAsset.m in Sources */,
 				3CFA28171BA9BC03005A9551 /* DTRootViewController.m in Sources */,
 				3CD0AC731BA8ED750024BC7D /* DTCanvas.m in Sources */,
 				3CD0AC531BA8ED370024BC7D /* DTDrawViewController.m in Sources */,
+				3C8BC1E81BB0F39500E08C17 /* DTPhotoManager.m in Sources */,
+				3C8BC1E11BB0EB4100E08C17 /* UIImage+RoundedCorner.m in Sources */,
+				3C8BC1D91BB0EB4100E08C17 /* ELCImagePickerController.m in Sources */,
 				3C6A67BF1BAB5FD200A7C781 /* UIView+Screenshot.m in Sources */,
+				3C8BC1E51BB0F37A00E08C17 /* DTPhoto.m in Sources */,
 				3C4961FE1BAF10DB00B3F1D8 /* DTFacebookLoginViewController.m in Sources */,
 				3CD0AC4A1BA8ED370024BC7D /* main.m in Sources */,
+				3C8BC1E01BB0EB4100E08C17 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

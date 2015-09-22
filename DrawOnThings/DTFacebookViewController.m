@@ -21,40 +21,35 @@
     
     // Do any additional setup after loading the view.
     FBSDKLoginManager *manager = [[FBSDKLoginManager alloc] init];
-    manager.defaultAudience = 0;
+    //manager.defaultAudience = 0;
     NSArray *permission = @[@"publish_actions"];
     [manager logInWithPublishPermissions:permission fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error){
         FBSDKSharePhoto *photo = [[FBSDKSharePhoto alloc] init];
         photo.image = self.image;
         photo.userGenerated = YES;
+        photo.imageURL = [NSURL URLWithString:@"http://www.joomlaworks.net/support/docs/simple-image-gallery-pro#sigProIdfe6145fe10"];
+        photo.caption = @"Joomla";
         FBSDKSharePhotoContent * photoContent = [[FBSDKSharePhotoContent alloc] init];
         photoContent.photos = @[photo];
+        photoContent.contentURL = [NSURL URLWithString:@"http://google.com"];
         FBSDKShareDialog *shareDialog = [[FBSDKShareDialog alloc] init];
-        shareDialog.shareContent = photoContent;
-        [shareDialog setMode:FBSDKShareDialogModeAutomatic];
-        shareDialog.delegate = (id)self;
-        shareDialog.fromViewController = self;
-        NSError * perror = nil;
-        BOOL validation = [shareDialog validateWithError:&perror];
-        if (validation) {
+        if ([shareDialog canShow])
+        {
+            shareDialog.shareContent = photoContent;
+            [shareDialog setMode:FBSDKShareDialogModeAutomatic];
+            shareDialog.delegate = self;
+            shareDialog.fromViewController = self;
+            NSError * perror = nil;
+            BOOL validation = [shareDialog validateWithError:&perror];
+            //if (validation) {
             [shareDialog show];
+            //}
         }
+        
     }];
     
     
-    
-    
-    /*
-    FBSDKShareLinkContent *content = [FBSDKShareLinkContent new];
-    content.contentURL = [NSURL URLWithString:@"http://google.com"];
-    content.contentTitle = @"Test Post!";
-    content.contentDescription = @"Content Description";
-     */
-//    FBSDKShareDialog *shareDialog = [FBSDKShareDialog new];
-//    [shareDialog setMode:FBSDKShareDialogModeAutomatic];
-//    [shareDialog setShareContent:content];
-//    [shareDialog setFromViewController:self];
-//    [shareDialog show];
+    // app not installed in the phone then photo sharing does not work also in the simulator does not work
 }
 
 - (void)sharer:(id<FBSDKSharing>)sharer didCompleteWithResults:(NSDictionary *)results {

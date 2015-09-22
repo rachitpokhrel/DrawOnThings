@@ -26,29 +26,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self image];
+    self.imageView.image = self.image;
+    self.processedImage = self.image;
     self.canvas.backgroundColor = [UIColor clearColor];    
 }
 
--(void)image
-{
-    ALAssetRepresentation *rep = [self.asset defaultRepresentation];
-    CGImageRef imageRef = [rep fullResolutionImage];
-    UIImage *image = [UIImage imageWithCGImage:imageRef];
-    self.imageView.image = image;
-    self.processedImage = image;
-}
 
 - (IBAction)save:(id)sender
 {
     UIImage *image = [self.canvas imageByDrawingOnImageCG:self.imageView.image];
     self.processedImage = image;
     NSData *imageData = UIImagePNGRepresentation(image);
-    ALAssetRepresentation *rep = [self.asset defaultRepresentation];
-    NSDictionary *dictionary = [rep metadata];
-    [self.asset writeModifiedImageDataToSavedPhotosAlbum:imageData metadata:dictionary completionBlock:^(NSURL *assetURL, NSError *error){
+    //ALAssetRepresentation *rep = [self.asset defaultRepresentation];
+    //NSDictionary *dictionary = [rep metadata];
+    //[self.asset writeModifiedImageDataToSavedPhotosAlbum:imageData metadata:dictionary completionBlock:^(NSURL *assetURL, NSError *error){
         
-    }];
+    //}];
      
 }
 
@@ -86,26 +79,16 @@
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-     if ([segue.identifier isEqualToString:@"showTwitter"])
-     {
-         DTTwitterLoginViewController *controller = [segue destinationViewController];
-         controller.image = self.processedImage;
-     }
-     if ([segue.identifier isEqualToString:@"showFacebook"])
-     {
-         DTFacebookLoginViewController *controller = [segue destinationViewController];
-         controller.image = self.processedImage;
-     }
-     if ([segue.identifier isEqualToString:@"directShareTwitter"])
-     {
-         DTTwitterViewController *controller = [segue destinationViewController];
-         controller.image = self.processedImage;
-     }
-     if ([segue.identifier isEqualToString:@"directShareFacebook"])
-     {
-         DTFacebookViewController *controller = [segue destinationViewController];
-         controller.image = self.processedImage;
-     }
+     
+     NSArray *segues = @[@"showTwitter",@"showFacebook",@"directShareTwitter",@"directShareFacebook"];
+     void (^segueBlock) (id, NSUInteger) = ^(id seguesArray, NSUInteger index){
+         [segue.identifier isEqualToString:seguesArray[0]] ? ((DTTwitterLoginViewController*)[segue destinationViewController]).image = self.processedImage:nil;
+         [segue.identifier isEqualToString:seguesArray[1]] ? ((DTFacebookLoginViewController*)[segue destinationViewController]).image = self.processedImage:nil;
+         [segue.identifier isEqualToString:seguesArray[2]] ? ((DTTwitterViewController*)[segue destinationViewController]).image = self.processedImage:nil;
+         [segue.identifier isEqualToString:seguesArray[3]] ? ((DTFacebookViewController*)[segue destinationViewController]).image = self.processedImage:nil;
+         index > -1 ? segueBlock(seguesArray,index -1):nil;
+     };
+      segueBlock(segues,segues.count -1);
  }
 
 

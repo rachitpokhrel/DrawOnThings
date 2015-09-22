@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ELCImagePickerController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface DTAlbumContentsViewController : UICollectionViewController
-@property (nonatomic, strong) NSMutableArray *assets;
-@property (nonatomic, strong) ALAssetsGroup *assetsGroup;
+@interface DTAlbumContentsViewController : UICollectionViewController<ELCImagePickerControllerDelegate, UINavigationControllerDelegate,UICollectionViewDataSource>
+
 -(IBAction)unwindToAlbumViewController:(UIStoryboardSegue*)storyboard;
+- (IBAction)loadCamera:(id)sender;
+- (IBAction)loadPhotoLibrary:(id)sender;
 @end

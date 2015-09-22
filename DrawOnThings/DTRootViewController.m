@@ -123,9 +123,7 @@
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         if (self.groups.count > (NSUInteger)selectedIndexPath.row) {
             
-            // hand off the asset group (i.e. album) to the next view controller
-            DTAlbumContentsViewController *albumContentsViewController = [segue destinationViewController];
-            albumContentsViewController.assetsGroup = self.groups[selectedIndexPath.row];
+            
         }
     }
 }

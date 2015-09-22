@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="933"/>
+            <point key="canvasLocation" x="915" y="933"/>
         </scene>
         <!--Twitter Login View Controller-->
         <scene sceneID="86r-gq-M88">
@@ -201,53 +201,6 @@
             </objects>
             <point key="canvasLocation" x="3122" y="1297"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="iIt-kp-5hD">
-            <objects>
-                <tableViewController id="hIC-HW-PhZ" customClass="DTRootViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kiv-2n-YSl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="f9D-GZ-DVN" detailTextLabel="4ZD-WN-f1R" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="aJZ-MM-jZH">
-                                <rect key="frame" x="0.0" y="86" width="600" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aJZ-MM-jZH" id="wqr-R7-LEc">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="49"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f9D-GZ-DVN">
-                                            <rect key="frame" x="15" y="6" width="36" height="22"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ZD-WN-f1R">
-                                            <rect key="frame" x="15" y="28" width="44" height="15"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="GvM-CJ-sGT" kind="push" identifier="showDetail" id="GeJ-ER-Qzi"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hIC-HW-PhZ" id="7qW-jJ-XKD"/>
-                            <outlet property="delegate" destination="hIC-HW-PhZ" id="LRd-nY-ehX"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="3vk-qa-eMx"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3g7-52-Bhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="92" y="933"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="yzd-H5-69R">
             <objects>
@@ -257,14 +210,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hIC-HW-PhZ" kind="relationship" relationship="rootViewController" id="Lrj-Dl-UpO"/>
+                        <segue destination="GvM-CJ-sGT" kind="relationship" relationship="rootViewController" id="fl4-8h-nam"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1B-zZ-N1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-646" y="933"/>
         </scene>
-        <!--Album Contents View Controller-->
+        <!--Photos-->
         <scene sceneID="rNe-Kc-Msg">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="GvM-CJ-sGT" customClass="DTAlbumContentsViewController" sceneMemberID="viewController">
@@ -308,7 +261,18 @@
                             <outlet property="delegate" destination="GvM-CJ-sGT" id="oRg-Al-9db"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="k8H-Q9-f2C"/>
+                    <navigationItem key="navigationItem" title="Photos" id="g9q-IQ-gBa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="eGO-jh-KqL">
+                            <connections>
+                                <action selector="loadCamera:" destination="GvM-CJ-sGT" id="g8J-b6-ANF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mEo-8q-sMU">
+                            <connections>
+                                <action selector="loadPhotoLibrary:" destination="GvM-CJ-sGT" id="mFa-yd-qLs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="FQi-6L-Ruo" kind="unwind" identifier="backToGallery" unwindAction="unwindToAlbumViewController:" id="fDV-ii-lkH"/>
                     </connections>
@@ -316,7 +280,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJg-WQ-AbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FQi-6L-Ruo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="858" y="933"/>
+            <point key="canvasLocation" x="140" y="933"/>
         </scene>
         <!--AssetsDataIsInaccessibleViewController-->
         <scene sceneID="UaF-7C-Nlc">
@@ -357,7 +321,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fsm-yL-BeJ"/>
         <segue reference="i22-s0-jV7"/>
+        <segue reference="fsm-yL-BeJ"/>
     </inferredMetricsTieBreakers>
 </document>
